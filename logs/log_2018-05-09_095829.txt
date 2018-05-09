@@ -1,0 +1,121 @@
+[2018-05-09 09:58:29,464][picSpider_WAY.py:277][INFO] - ---------------------------------------------------------------------------------------------------
+[2018-05-09 09:58:29,464][picSpider_WAY.py:278][INFO] - givenURL is https://www.pinterest.com/percylee1817/eastern-paint/
+
+[2018-05-09 09:58:29,466][picSpider_WAY.py:85][INFO] - 发现对应album的缓存源代码.. 准备加载..
+[2018-05-09 09:58:29,683][picSpider_WAY.py:243][INFO] - 没找到图片对象..?
+[2018-05-09 09:58:29,710][picSpider_WAY.py:107][INFO] - 需要的图片数量 :102
+[2018-05-09 09:58:29,715][historyDB.py:110][INFO] - 判重操作完毕.. 需要的102张图片中,有0张图片已存在..
+[2018-05-09 09:58:29,716][picSpider_WAY.py:114][INFO] - 准备正式下载资源.. 需要下载的资源数量 : 102
+[2018-05-09 09:58:29,716][picSpider_WAY.py:116][INFO] - 
+............................................
+[2018-05-09 09:58:30,038][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:30,369][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:30,643][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:30,954][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:31,228][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:31,530][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:31,831][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:32,130][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:32,430][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:32,730][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:33,030][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:33,331][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:33,631][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:33,930][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:34,230][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:34,530][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:34,830][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:35,130][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:35,430][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:35,730][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:36,030][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:36,329][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:36,631][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:36,930][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:37,231][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:37,532][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:37,831][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:38,129][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:38,432][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:38,730][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:39,030][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:39,330][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:39,629][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:39,932][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:40,234][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:40,530][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:40,831][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:41,132][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:41,431][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:41,731][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:42,032][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:42,331][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:42,631][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:42,931][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:43,231][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:43,534][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:43,834][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:44,138][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:44,435][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:44,735][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:47,911][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:48,208][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:48,509][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:48,808][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:49,110][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:49,411][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:49,709][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:50,009][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:50,314][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:50,617][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:50,915][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:51,215][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:51,515][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:51,815][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:52,115][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:52,415][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:52,715][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:53,015][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:53,316][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:53,445][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:53,615][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:53,922][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:54,216][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:54,515][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:54,815][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:55,119][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:55,604][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:55,901][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:56,203][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:56,518][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:57,214][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:57,513][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:57,810][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:58,111][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:58,411][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:58,711][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:59,011][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:59,309][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:59,636][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:58:59,938][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:59:00,242][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:59:00,542][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:59:00,843][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:59:01,143][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:59:01,443][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:59:01,742][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:59:02,042][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:59:02,343][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:59:02,642][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:59:02,945][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:59:03,243][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:59:05,931][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:59:06,231][connectionpool.py:805][INFO] - Starting new HTTPS connection (1): i.pinimg.com
+[2018-05-09 09:59:08,534][picSpider_WAY.py:121][INFO] - ............................................
+[2018-05-09 09:59:08,534][picSpider_WAY.py:122][INFO] - ...总共下载成功102张图片 / 下载失败0张图片...
+[2018-05-09 09:59:08,534][picSpider_WAY.py:277][INFO] - ---------------------------------------------------------------------------------------------------
+[2018-05-09 09:59:08,534][picSpider_WAY.py:278][INFO] - givenURL is https://www.pinterest.com/percylee1817/machine/
+
+[2018-05-09 09:59:08,535][picSpider_WAY.py:89][INFO] - 正在发送URL请求, 准备获取资源列表...........
+[2018-05-09 09:59:35,944][picSpider_WAY.py:152][INFO] - 没有找到Pins属性..
+[2018-05-09 09:59:36,954][picSpider_WAY.py:167][INFO] - 滑一下.. 然后等待1秒...

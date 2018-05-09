@@ -1,0 +1,185 @@
+[2018-02-20 17:47:43,443][picSpider_WAY.py:277][INFO] - ---------------------------------------------------------------------------------------------------
+[2018-02-20 17:47:43,443][picSpider_WAY.py:278][INFO] - givenURL is https://www.pinterest.com/percylee1817/eastern-paint/
+
+[2018-02-20 17:47:43,502][picSpider_WAY.py:89][INFO] - 正在发送URL请求, 准备获取资源列表...........
+[2018-02-20 17:48:20,898][picSpider_WAY.py:170][INFO] - album picNum : 99
+[2018-02-20 17:48:21,484][picSpider_WAY.py:188][INFO] - scanned pic resource : 25
+[2018-02-20 17:48:22,105][picSpider_WAY.py:188][INFO] - scanned pic resource : 25
+[2018-02-20 17:48:22,631][picSpider_WAY.py:188][INFO] - scanned pic resource : 25
+[2018-02-20 17:48:23,839][picSpider_WAY.py:188][INFO] - scanned pic resource : 50
+[2018-02-20 17:48:24,298][picSpider_WAY.py:188][INFO] - scanned pic resource : 50
+[2018-02-20 17:48:24,741][picSpider_WAY.py:188][INFO] - scanned pic resource : 75
+[2018-02-20 17:48:25,263][picSpider_WAY.py:188][INFO] - scanned pic resource : 75
+[2018-02-20 17:48:25,868][picSpider_WAY.py:188][INFO] - scanned pic resource : 75
+[2018-02-20 17:48:26,526][picSpider_WAY.py:188][INFO] - scanned pic resource : 99
+[2018-02-20 17:48:26,677][picSpider_WAY.py:211][INFO] - 网页源代码一缓存只路径 : E:\站点图片下载\pinterest\percylee1817\eastern-paint_page_source.html
+[2018-02-20 17:48:28,658][picSpider_WAY.py:107][INFO] - 需要的图片数量 :99
+[2018-02-20 17:48:28,661][historyDB.py:110][INFO] - 判重操作完毕.. 需要的99张图片中,有0张图片已存在..
+[2018-02-20 17:48:28,661][picSpider_WAY.py:114][INFO] - 准备正式下载资源.. 需要下载的资源数量 : 99
+[2018-02-20 17:48:28,661][picSpider_WAY.py:116][INFO] - 
+............................................
+[2018-02-20 17:49:06,530][picSpider_WAY.py:121][INFO] - ............................................
+[2018-02-20 17:49:06,530][picSpider_WAY.py:122][INFO] - ...总共下载成功99张图片 / 下载失败0张图片...
+[2018-02-20 17:49:06,530][picSpider_WAY.py:277][INFO] - ---------------------------------------------------------------------------------------------------
+[2018-02-20 17:49:06,531][picSpider_WAY.py:278][INFO] - givenURL is https://www.pinterest.com/percylee1817/machine/
+
+[2018-02-20 17:49:06,532][picSpider_WAY.py:89][INFO] - 正在发送URL请求, 准备获取资源列表...........
+[2018-02-20 17:49:18,516][picSpider_WAY.py:170][INFO] - album picNum : 1340
+[2018-02-20 17:49:19,017][picSpider_WAY.py:188][INFO] - scanned pic resource : 25
+[2018-02-20 17:49:19,622][picSpider_WAY.py:188][INFO] - scanned pic resource : 25
+[2018-02-20 17:49:20,311][picSpider_WAY.py:188][INFO] - scanned pic resource : 50
+[2018-02-20 17:49:20,945][picSpider_WAY.py:188][INFO] - scanned pic resource : 50
+[2018-02-20 17:49:21,560][picSpider_WAY.py:188][INFO] - scanned pic resource : 50
+[2018-02-20 17:49:22,146][picSpider_WAY.py:188][INFO] - scanned pic resource : 75
+[2018-02-20 17:49:22,626][picSpider_WAY.py:188][INFO] - scanned pic resource : 75
+[2018-02-20 17:49:23,138][picSpider_WAY.py:188][INFO] - scanned pic resource : 75
+[2018-02-20 17:49:23,649][picSpider_WAY.py:188][INFO] - scanned pic resource : 100
+[2018-02-20 17:49:24,153][picSpider_WAY.py:188][INFO] - scanned pic resource : 100
+[2018-02-20 17:49:24,649][picSpider_WAY.py:188][INFO] - scanned pic resource : 100
+[2018-02-20 17:49:25,198][picSpider_WAY.py:188][INFO] - scanned pic resource : 100
+[2018-02-20 17:49:25,686][picSpider_WAY.py:188][INFO] - scanned pic resource : 125
+[2018-02-20 17:49:26,220][picSpider_WAY.py:188][INFO] - scanned pic resource : 125
+[2018-02-20 17:49:26,848][picSpider_WAY.py:188][INFO] - scanned pic resource : 125
+[2018-02-20 17:49:27,655][picSpider_WAY.py:188][INFO] - scanned pic resource : 25
+[2018-02-20 17:49:28,247][picSpider_WAY.py:188][INFO] - scanned pic resource : 25
+[2018-02-20 17:49:28,784][picSpider_WAY.py:188][INFO] - scanned pic resource : 25
+[2018-02-20 17:49:29,240][picSpider_WAY.py:188][INFO] - scanned pic resource : 50
+[2018-02-20 17:49:29,678][picSpider_WAY.py:188][INFO] - scanned pic resource : 50
+[2018-02-20 17:49:30,147][picSpider_WAY.py:188][INFO] - scanned pic resource : 50
+[2018-02-20 17:49:30,755][picSpider_WAY.py:188][INFO] - scanned pic resource : 75
+[2018-02-20 17:49:31,317][picSpider_WAY.py:188][INFO] - scanned pic resource : 75
+[2018-02-20 17:49:31,910][picSpider_WAY.py:188][INFO] - scanned pic resource : 75
+[2018-02-20 17:49:32,539][picSpider_WAY.py:188][INFO] - scanned pic resource : 100
+[2018-02-20 17:49:33,053][picSpider_WAY.py:188][INFO] - scanned pic resource : 100
+[2018-02-20 17:49:33,838][picSpider_WAY.py:188][INFO] - scanned pic resource : 125
+[2018-02-20 17:49:34,330][picSpider_WAY.py:188][INFO] - scanned pic resource : 125
+[2018-02-20 17:49:34,804][picSpider_WAY.py:188][INFO] - scanned pic resource : 125
+[2018-02-20 17:49:35,422][picSpider_WAY.py:188][INFO] - scanned pic resource : 150
+[2018-02-20 17:49:36,028][picSpider_WAY.py:188][INFO] - scanned pic resource : 150
+[2018-02-20 17:49:36,628][picSpider_WAY.py:188][INFO] - scanned pic resource : 150
+[2018-02-20 17:49:37,408][picSpider_WAY.py:188][INFO] - scanned pic resource : 175
+[2018-02-20 17:49:38,016][picSpider_WAY.py:188][INFO] - scanned pic resource : 175
+[2018-02-20 17:49:38,646][picSpider_WAY.py:188][INFO] - scanned pic resource : 200
+[2018-02-20 17:49:39,253][picSpider_WAY.py:188][INFO] - scanned pic resource : 200
+[2018-02-20 17:49:39,939][picSpider_WAY.py:188][INFO] - scanned pic resource : 225
+[2018-02-20 17:49:40,450][picSpider_WAY.py:188][INFO] - scanned pic resource : 225
+[2018-02-20 17:49:40,993][picSpider_WAY.py:188][INFO] - scanned pic resource : 225
+[2018-02-20 17:49:41,524][picSpider_WAY.py:188][INFO] - scanned pic resource : 250
+[2018-02-20 17:49:42,072][picSpider_WAY.py:188][INFO] - scanned pic resource : 250
+[2018-02-20 17:49:42,725][picSpider_WAY.py:188][INFO] - scanned pic resource : 275
+[2018-02-20 17:49:43,258][picSpider_WAY.py:188][INFO] - scanned pic resource : 275
+[2018-02-20 17:49:43,784][picSpider_WAY.py:188][INFO] - scanned pic resource : 275
+[2018-02-20 17:49:44,400][picSpider_WAY.py:188][INFO] - scanned pic resource : 300
+[2018-02-20 17:49:44,897][picSpider_WAY.py:188][INFO] - scanned pic resource : 300
+[2018-02-20 17:49:45,451][picSpider_WAY.py:188][INFO] - scanned pic resource : 300
+[2018-02-20 17:49:45,956][picSpider_WAY.py:188][INFO] - scanned pic resource : 325
+[2018-02-20 17:49:46,607][picSpider_WAY.py:188][INFO] - scanned pic resource : 325
+[2018-02-20 17:49:47,088][picSpider_WAY.py:188][INFO] - scanned pic resource : 325
+[2018-02-20 17:49:47,681][picSpider_WAY.py:188][INFO] - scanned pic resource : 350
+[2018-02-20 17:49:48,307][picSpider_WAY.py:188][INFO] - scanned pic resource : 350
+[2018-02-20 17:49:48,800][picSpider_WAY.py:188][INFO] - scanned pic resource : 350
+[2018-02-20 17:49:49,286][picSpider_WAY.py:188][INFO] - scanned pic resource : 375
+[2018-02-20 17:49:49,846][picSpider_WAY.py:188][INFO] - scanned pic resource : 375
+[2018-02-20 17:49:50,464][picSpider_WAY.py:188][INFO] - scanned pic resource : 375
+[2018-02-20 17:49:51,056][picSpider_WAY.py:188][INFO] - scanned pic resource : 375
+[2018-02-20 17:49:51,640][picSpider_WAY.py:188][INFO] - scanned pic resource : 375
+[2018-02-20 17:49:52,144][picSpider_WAY.py:188][INFO] - scanned pic resource : 400
+[2018-02-20 17:49:52,683][picSpider_WAY.py:188][INFO] - scanned pic resource : 400
+[2018-02-20 17:49:53,348][picSpider_WAY.py:188][INFO] - scanned pic resource : 400
+[2018-02-20 17:49:53,902][picSpider_WAY.py:188][INFO] - scanned pic resource : 400
+[2018-02-20 17:49:54,506][picSpider_WAY.py:188][INFO] - scanned pic resource : 400
+[2018-02-20 17:49:55,140][picSpider_WAY.py:188][INFO] - scanned pic resource : 400
+[2018-02-20 17:49:55,697][picSpider_WAY.py:188][INFO] - scanned pic resource : 425
+[2018-02-20 17:49:56,207][picSpider_WAY.py:188][INFO] - scanned pic resource : 425
+[2018-02-20 17:49:56,870][picSpider_WAY.py:188][INFO] - scanned pic resource : 450
+[2018-02-20 17:49:57,539][picSpider_WAY.py:188][INFO] - scanned pic resource : 450
+[2018-02-20 17:49:58,129][picSpider_WAY.py:188][INFO] - scanned pic resource : 475
+[2018-02-20 17:49:58,726][picSpider_WAY.py:188][INFO] - scanned pic resource : 475
+[2018-02-20 17:49:59,280][picSpider_WAY.py:188][INFO] - scanned pic resource : 475
+[2018-02-20 17:49:59,799][picSpider_WAY.py:188][INFO] - scanned pic resource : 475
+[2018-02-20 17:50:00,283][picSpider_WAY.py:188][INFO] - scanned pic resource : 475
+[2018-02-20 17:50:00,881][picSpider_WAY.py:188][INFO] - scanned pic resource : 500
+[2018-02-20 17:50:01,526][picSpider_WAY.py:188][INFO] - scanned pic resource : 500
+[2018-02-20 17:50:02,189][picSpider_WAY.py:188][INFO] - scanned pic resource : 525
+[2018-02-20 17:50:02,756][picSpider_WAY.py:188][INFO] - scanned pic resource : 525
+[2018-02-20 17:50:03,394][picSpider_WAY.py:188][INFO] - scanned pic resource : 525
+[2018-02-20 17:50:04,284][picSpider_WAY.py:188][INFO] - scanned pic resource : 550
+[2018-02-20 17:50:04,933][picSpider_WAY.py:188][INFO] - scanned pic resource : 550
+[2018-02-20 17:50:05,518][picSpider_WAY.py:188][INFO] - scanned pic resource : 575
+[2018-02-20 17:50:06,160][picSpider_WAY.py:188][INFO] - scanned pic resource : 575
+[2018-02-20 17:50:06,797][picSpider_WAY.py:188][INFO] - scanned pic resource : 575
+[2018-02-20 17:50:07,456][picSpider_WAY.py:188][INFO] - scanned pic resource : 600
+[2018-02-20 17:50:08,045][picSpider_WAY.py:188][INFO] - scanned pic resource : 600
+[2018-02-20 17:50:08,626][picSpider_WAY.py:188][INFO] - scanned pic resource : 600
+[2018-02-20 17:50:09,455][picSpider_WAY.py:188][INFO] - scanned pic resource : 625
+[2018-02-20 17:50:10,015][picSpider_WAY.py:188][INFO] - scanned pic resource : 625
+[2018-02-20 17:50:10,644][picSpider_WAY.py:188][INFO] - scanned pic resource : 625
+[2018-02-20 17:50:11,410][picSpider_WAY.py:188][INFO] - scanned pic resource : 649
+[2018-02-20 17:50:12,078][picSpider_WAY.py:188][INFO] - scanned pic resource : 649
+[2018-02-20 17:50:12,670][picSpider_WAY.py:188][INFO] - scanned pic resource : 649
+[2018-02-20 17:50:13,369][picSpider_WAY.py:188][INFO] - scanned pic resource : 674
+[2018-02-20 17:50:13,957][picSpider_WAY.py:188][INFO] - scanned pic resource : 674
+[2018-02-20 17:50:14,571][picSpider_WAY.py:188][INFO] - scanned pic resource : 674
+[2018-02-20 17:50:15,148][picSpider_WAY.py:188][INFO] - scanned pic resource : 699
+[2018-02-20 17:50:15,772][picSpider_WAY.py:188][INFO] - scanned pic resource : 699
+[2018-02-20 17:50:16,443][picSpider_WAY.py:188][INFO] - scanned pic resource : 699
+[2018-02-20 17:50:17,278][picSpider_WAY.py:188][INFO] - scanned pic resource : 724
+[2018-02-20 17:50:17,916][picSpider_WAY.py:188][INFO] - scanned pic resource : 724
+[2018-02-20 17:50:18,521][picSpider_WAY.py:188][INFO] - scanned pic resource : 749
+[2018-02-20 17:50:19,171][picSpider_WAY.py:188][INFO] - scanned pic resource : 749
+[2018-02-20 17:50:19,775][picSpider_WAY.py:188][INFO] - scanned pic resource : 749
+[2018-02-20 17:50:20,522][picSpider_WAY.py:188][INFO] - scanned pic resource : 774
+[2018-02-20 17:50:21,225][picSpider_WAY.py:188][INFO] - scanned pic resource : 774
+[2018-02-20 17:50:22,048][picSpider_WAY.py:188][INFO] - scanned pic resource : 798
+[2018-02-20 17:50:22,777][picSpider_WAY.py:188][INFO] - scanned pic resource : 798
+[2018-02-20 17:50:23,606][picSpider_WAY.py:188][INFO] - scanned pic resource : 823
+[2018-02-20 17:50:24,361][picSpider_WAY.py:188][INFO] - scanned pic resource : 823
+[2018-02-20 17:50:25,131][picSpider_WAY.py:188][INFO] - scanned pic resource : 848
+[2018-02-20 17:50:25,769][picSpider_WAY.py:188][INFO] - scanned pic resource : 848
+[2018-02-20 17:50:26,366][picSpider_WAY.py:188][INFO] - scanned pic resource : 848
+[2018-02-20 17:50:27,004][picSpider_WAY.py:188][INFO] - scanned pic resource : 873
+[2018-02-20 17:50:27,748][picSpider_WAY.py:188][INFO] - scanned pic resource : 873
+[2018-02-20 17:50:28,504][picSpider_WAY.py:188][INFO] - scanned pic resource : 898
+[2018-02-20 17:50:29,312][picSpider_WAY.py:188][INFO] - scanned pic resource : 898
+[2018-02-20 17:50:30,203][picSpider_WAY.py:188][INFO] - scanned pic resource : 923
+[2018-02-20 17:50:31,035][picSpider_WAY.py:188][INFO] - scanned pic resource : 923
+[2018-02-20 17:50:31,643][picSpider_WAY.py:188][INFO] - scanned pic resource : 923
+[2018-02-20 17:50:32,711][picSpider_WAY.py:188][INFO] - scanned pic resource : 947
+[2018-02-20 17:50:33,516][picSpider_WAY.py:188][INFO] - scanned pic resource : 972
+[2018-02-20 17:50:34,360][picSpider_WAY.py:188][INFO] - scanned pic resource : 972
+[2018-02-20 17:50:34,980][picSpider_WAY.py:188][INFO] - scanned pic resource : 997
+[2018-02-20 17:50:35,578][picSpider_WAY.py:188][INFO] - scanned pic resource : 997
+[2018-02-20 17:50:36,405][picSpider_WAY.py:188][INFO] - scanned pic resource : 1022
+[2018-02-20 17:50:37,091][picSpider_WAY.py:188][INFO] - scanned pic resource : 1022
+[2018-02-20 17:50:37,898][picSpider_WAY.py:188][INFO] - scanned pic resource : 1022
+[2018-02-20 17:50:38,970][picSpider_WAY.py:188][INFO] - scanned pic resource : 1047
+[2018-02-20 17:50:39,697][picSpider_WAY.py:188][INFO] - scanned pic resource : 1047
+[2018-02-20 17:50:40,497][picSpider_WAY.py:188][INFO] - scanned pic resource : 1072
+[2018-02-20 17:50:41,156][picSpider_WAY.py:188][INFO] - scanned pic resource : 1072
+[2018-02-20 17:50:42,278][picSpider_WAY.py:188][INFO] - scanned pic resource : 1097
+[2018-02-20 17:50:43,051][picSpider_WAY.py:188][INFO] - scanned pic resource : 1097
+[2018-02-20 17:50:43,802][picSpider_WAY.py:188][INFO] - scanned pic resource : 1121
+[2018-02-20 17:50:44,538][picSpider_WAY.py:188][INFO] - scanned pic resource : 1121
+[2018-02-20 17:50:45,459][picSpider_WAY.py:188][INFO] - scanned pic resource : 1145
+[2018-02-20 17:50:46,221][picSpider_WAY.py:188][INFO] - scanned pic resource : 1145
+[2018-02-20 17:50:46,977][picSpider_WAY.py:188][INFO] - scanned pic resource : 1170
+[2018-02-20 17:50:47,770][picSpider_WAY.py:188][INFO] - scanned pic resource : 1170
+[2018-02-20 17:50:48,751][picSpider_WAY.py:188][INFO] - scanned pic resource : 1194
+[2018-02-20 17:50:49,625][picSpider_WAY.py:188][INFO] - scanned pic resource : 1194
+[2018-02-20 17:50:50,600][picSpider_WAY.py:188][INFO] - scanned pic resource : 1219
+[2018-02-20 17:50:51,311][picSpider_WAY.py:188][INFO] - scanned pic resource : 1219
+[2018-02-20 17:50:52,374][picSpider_WAY.py:188][INFO] - scanned pic resource : 1243
+[2018-02-20 17:50:53,109][picSpider_WAY.py:188][INFO] - scanned pic resource : 1243
+[2018-02-20 17:50:54,121][picSpider_WAY.py:188][INFO] - scanned pic resource : 1267
+[2018-02-20 17:50:54,898][picSpider_WAY.py:188][INFO] - scanned pic resource : 1267
+[2018-02-20 17:50:55,747][picSpider_WAY.py:188][INFO] - scanned pic resource : 1292
+[2018-02-20 17:50:56,510][picSpider_WAY.py:188][INFO] - scanned pic resource : 1292
+[2018-02-20 17:50:57,355][picSpider_WAY.py:188][INFO] - scanned pic resource : 1317
+[2018-02-20 17:50:58,183][picSpider_WAY.py:188][INFO] - scanned pic resource : 1317
+[2018-02-20 17:51:01,584][picSpider_WAY.py:188][INFO] - scanned pic resource : 1335
+[2018-02-20 17:51:03,035][picSpider_WAY.py:211][INFO] - 网页源代码一缓存只路径 : E:\站点图片下载\pinterest\percylee1817\machine_page_source.html
+[2018-02-20 17:51:07,203][picSpider_WAY.py:107][INFO] - 需要的图片数量 :1335
+[2018-02-20 17:51:07,239][historyDB.py:110][INFO] - 判重操作完毕.. 需要的1335张图片中,有0张图片已存在..
+[2018-02-20 17:51:07,239][picSpider_WAY.py:114][INFO] - 准备正式下载资源.. 需要下载的资源数量 : 1335
+[2018-02-20 17:51:07,239][picSpider_WAY.py:116][INFO] - 
+............................................
