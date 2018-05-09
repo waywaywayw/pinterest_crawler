@@ -14,4 +14,5 @@
 3. 在项目的givenURL.txt里添加一行：https://www.pinterest.com/percylee1817/machine/
   运行就好 = =
   
+  
 总结来说，就是先把缓存文件保存到本地，然后程序解析下载图片 = =
