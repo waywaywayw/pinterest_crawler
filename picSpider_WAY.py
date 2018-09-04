@@ -1,15 +1,9 @@
 #coding=utf-8
-import threading
-import os
-import logging
-from re import sub
 import random
 
-import requests
 from bs4 import BeautifulSoup
 
 from functions.historyDB import _historyDB
-from functions.tools import *
 # from functions.tools import StringClean
 from functions.multthreading_download import *
 
@@ -18,10 +12,8 @@ from model.pic import _pic
 from standard.logger import *
 from standard.requestsClient import _requestsClient
 
-from selenium import webdriver
 # 引入配置对象DesiredCapabilities
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-from selenium_webdriver.PhantomJS import webdriver_PhantomJS
+from crawler_myTools.selenium_tools.webdriver import webdriver_PhantomJS
 
 
 # 需要给定的超参数
