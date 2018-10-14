@@ -13,20 +13,15 @@ from standard.logger import *
 from standard.requestsClient import _requestsClient
 
 from atools_crawler.selenium.webdriver import MyWebDriver
+import config
 
 
-# 需要给定的超参数
-# 0、数据存储的文件夹路径（需要提前创建文件夹）
-Rootpath = os.path.join('E:\\', '站点图片下载', 'pinterest', 'percylee1817')
 # 1、给定的URL
-# givenURL = 'https://www.pinterest.com/percylee1817/inspiration-giver/'
+# test
 # givenURLs = [ 'https://www.pinterest.com/percylee1817/eastern-paint/'
 #             , 'https://www.pinterest.com/percylee1817/machine/'
 #              , 'https://www.pinterest.com/yuguenkim/sci-fi-conceptart/'
 #             ]
-
-# 2、代理的端口号
-proxyPort = 54422    # 蓝灯
 
 
 # 用到的超参数
@@ -36,7 +31,6 @@ raw_URL = 'https://www.pinterest.com/'
 SiteCode = 'utf-8'
 
 
-
 # 爬虫主体
 class spiderWay_picDownloader :
     client = ""
@@ -44,9 +38,7 @@ class spiderWay_picDownloader :
     # 构造方法。初始化client会话对象
     def __init__(self, Rootpath):
         self.client = _requestsClient()
-
-        global proxyPort
-        self.client.setProxyPort(proxyPort) # 设置代理端口
+        self.client.setProxyPort(config.proxyPort) # 设置代理端口
         # DBpath路径就是用户目录
         self.DBpath = Rootpath
 
@@ -276,7 +268,7 @@ if __name__ == '__main__':
 
             # work
             while True :
-                spider = spiderWay_picDownloader(Rootpath)
+                spider = spiderWay_picDownloader(config.Rootpath)
                 # test
                 # spider.client.requestsGet('https://i.pinimg.com/originals/65/23/66/65236656825be0adb17a2f1d54f3bfab.jpg')
                 # spider.client.requestsGet('https://i.pinimg.com/originals/6c/36/2c/6c362c4906b447c6620c09c250001f93--black.jpg')

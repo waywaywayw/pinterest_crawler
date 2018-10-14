@@ -52,6 +52,7 @@ def opendir(path) :
 
 # 如果后面带k..就去掉然后*1000
 def getPins(string) :
+    string = string.strip()
     if string.endswith('k') :
         string = string[0:-1]
         ret = int(float(string) *1000)
