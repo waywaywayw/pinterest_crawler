@@ -40,6 +40,7 @@ SiteCode = 'utf-8'
 # 爬虫主体
 class spiderWay_picDownloader :
     client = ""
+
     # 构造方法。初始化client会话对象
     def __init__(self, Rootpath):
         self.client = _requestsClient()
