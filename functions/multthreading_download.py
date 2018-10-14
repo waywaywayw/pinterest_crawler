@@ -23,7 +23,7 @@ def downloadPicByList(picList, download_func, maxThread=40, verbose=False) :
         # 遍历切分好的列表
         for _ix, pic in enumerate(picList_subset) :
             # 创建线程.. 调用下载资源API..
-            threads.append(downloadThread(func=downloadPicByOne, args=(pic, ix+_ix, download_func)))
+            threads.append(downloadThread(func=downloadPicByOne, args=(pic, ix+_ix, download_func, verbose)))
 
         # 并行开始
         for t in threads:

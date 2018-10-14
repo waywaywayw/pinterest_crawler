@@ -12,8 +12,7 @@ from model.pic import _pic
 from standard.logger import *
 from standard.requestsClient import _requestsClient
 
-# 引入配置对象DesiredCapabilities
-from crawler_myTools.selenium_tools.webdriver import webdriver_PhantomJS
+from atools_crawler.selenium.webdriver import MyWebDriver
 
 
 # 需要给定的超参数
@@ -27,7 +26,7 @@ Rootpath = os.path.join('E:\\', '站点图片下载', 'pinterest', 'percylee1817
 #             ]
 
 # 2、代理的端口号
-proxyPort = 60425    # 蓝灯
+proxyPort = 54422    # 蓝灯
 
 
 # 用到的超参数
@@ -78,8 +77,8 @@ class spiderWay_picDownloader :
             PageSource = open(os.path.join(self.DBpath, self.album+'_page_source.html'), 'r', encoding=SiteCode).read()
 
         else:
-            logging.warning('在线解析有问题 = = 暂时用不了')
-            return
+            # logging.warning('在线解析有问题 = = 暂时用不了')
+            # return
             logging.warning('正在发送URL请求, 准备获取资源列表...........')
             PageSource, status = self.getPageSource(givenURL)
             # 请求资源失败，直接return False
@@ -88,9 +87,9 @@ class spiderWay_picDownloader :
 
         # 3 获取实际需要的图片数量picNum（不一定是源代码里面的所有图片）
         soup = BeautifulSoup(PageSource, "html.parser")
-        Pins = soup.select('[class="_ta _s7 _s8 _s9 _tc _5l _sa _sk _si _sc"]')
-        if Pins is not None:
-            picNum = getPins(Pins[0].get_text())
+        Pins_elem = soup.find('div', {'class': '_w6 _0 _1 _2 _w9 _2y _3 _d _b _6'})
+        if Pins_elem is not None:
+            picNum = getPins(Pins_elem.get_text())
         else:
             logging.warning('在缓存源代码中没找到Pins 属性?')
             picNum = 0
@@ -110,8 +109,7 @@ class spiderWay_picDownloader :
             logging.warning('\n............................................')
             # 只下载subsetLen张资源..(这里可以改小，用于测试)
             subsetLen = len(picList)
-            succ, fail = downloadPicByList(picList[:subsetLen], self.client.requestsGet, maxThread=50)
-
+            succ, fail = downloadPicByList(picList[:subsetLen], self.client.requestsGet, maxThread=20, verbose=True)
             logging.warning('............................................')
             logging.warning('...总共下载成功'+str(succ)+'张图片 / 下载失败'+str(fail)+'张图片...')
         else :
@@ -125,7 +123,8 @@ class spiderWay_picDownloader :
     # 用模拟浏览器的方式，获取页面源代码
     def getPageSource(self, givenURL) :
         # 创建一个模拟浏览器
-        driver = webdriver_PhantomJS()
+        my_driver = MyWebDriver()
+        driver = my_driver.real_driver()
 
         # 访问givenURL
         try :
@@ -138,15 +137,18 @@ class spiderWay_picDownloader :
 
         # 取得图片数量Pins...
         cnt = 0
+        my_driver.page_to_file('temp_html.html')
         while True :
             Pins = None
             try :
-                Pins = driver.find_element_by_css_selector("span:nth-child(1)>b")
+                soup = BeautifulSoup(driver.page_source, 'html.parser')
+                Pins_elem = soup.find('div', {'class': '_w6 _0 _1 _2 _w9 _2y _3 _d _b _6'})
+                Pins = Pins_elem.get_text()
             except :
                 logging.warning('没有找到Pins属性..')
             # 正确的情况
             if Pins is not None :
-                picNum = getPins(Pins.text)
+                picNum = getPins(Pins)
                 break
             else :
                 if cnt !=0 and cnt %1 == 0 :
@@ -202,7 +204,7 @@ class spiderWay_picDownloader :
         # 保存页面源代码 (encoding 很重要)
         with open(os.path.join(self.DBpath, self.album+'_page_source.html'), 'w', encoding=SiteCode) as file :
             file.write(page_source)
-        logging.warning('网页源代码一缓存只路径 : '+os.path.join(self.DBpath, self.album+'_page_source.html'))
+        logging.warning('网页源代码缓存至路径 : '+os.path.join(self.DBpath, self.album+'_page_source.html'))
 
         # 退出模拟浏览器
         driver.close()
@@ -221,15 +223,15 @@ class spiderWay_picDownloader :
 
         # 解析得到的页面，获取帖子列表... beautifulSoup各种找...（不同站点需要修改的部分-----------------------------）
         picList = []
-        _pictList = soup.findAll("div", {"class": "_vz _2h _w0"})
+        _pictList = soup.findAll("div", {"class": "Grid__Item"})
         # logging.warning("从源代码中扫描到的图片资源数量 : "+str(len(_pictList)))
-        if picNum >= 1000 :
+        if picNum >= 1000:
             _pictList = _pictList[:len(_pictList)]
         else :
             _pictList = _pictList[:picNum]
         # logging.warning("Just need pic resources : "+str(picNum))
         for pic in _pictList:
-            imgObj = pic.find("div", {"class": "_0 _3m _2q"})
+            imgObj = pic.find("div", {"class": "GrowthUnauthPinImage"})
             # textObj = pic.find("div", {"class": "list-item-desc-title"})
             # print(imgObj)
             # print(textObj)
