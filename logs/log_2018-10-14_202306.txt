@@ -1,0 +1,18 @@
+[2018-10-14 20:23:06,345][picSpider_WAY.py:273][WARNING] - ---------------------------------------------------------------------------------------------------
+[2018-10-14 20:23:06,345][picSpider_WAY.py:274][WARNING] - givenURL is https://www.pinterest.com/percylee1817/eastern-paint/
+
+[2018-10-14 20:23:06,345][picSpider_WAY.py:82][WARNING] - 正在发送URL请求, 准备获取资源列表...........
+[2018-10-14 20:23:19,884][picSpider_WAY.py:166][WARNING] - album picNum : 225
+[2018-10-14 20:23:20,304][picSpider_WAY.py:184][WARNING] - scanned pic resource : 16
+[2018-10-14 20:23:20,771][picSpider_WAY.py:184][WARNING] - scanned pic resource : 16
+[2018-10-14 20:23:21,227][picSpider_WAY.py:184][WARNING] - scanned pic resource : 41
+[2018-10-14 20:23:21,826][picSpider_WAY.py:184][WARNING] - scanned pic resource : 41
+[2018-10-14 20:23:22,345][picSpider_WAY.py:184][WARNING] - scanned pic resource : 66
+[2018-10-14 20:23:22,947][picSpider_WAY.py:184][WARNING] - scanned pic resource : 91
+[2018-10-14 20:23:23,383][picSpider_WAY.py:184][WARNING] - scanned pic resource : 91
+[2018-10-14 20:23:24,057][picSpider_WAY.py:184][WARNING] - scanned pic resource : 116
+[2018-10-14 20:23:24,662][picSpider_WAY.py:184][WARNING] - scanned pic resource : 116
+[2018-10-14 20:23:25,100][picSpider_WAY.py:184][WARNING] - scanned pic resource : 141
+[2018-10-14 20:23:25,582][picSpider_WAY.py:184][WARNING] - scanned pic resource : 141
+[2018-10-14 20:23:26,036][picSpider_WAY.py:184][WARNING] - scanned pic resource : 166
+[2018-10-14 20:23:26,529][picSpider_WAY.py:184][WARNING] - scanned pic resource : 166
