@@ -137,7 +137,7 @@ class spiderWay_picDownloader :
 
         # 取得图片数量Pins...
         cnt = 0
-        my_driver.page_to_file('temp_html.html')
+        # my_driver.page_to_file('temp_html.html')
         while True :
             Pins = None
             try :
@@ -154,7 +154,7 @@ class spiderWay_picDownloader :
                 if cnt !=0 and cnt %1 == 0 :
                     logging.warning('还是不行.. 尝试重头再来一次..')
                     # 退出模拟浏览器
-                    driver.close()
+                    # driver.close()
                     driver.quit()
                     return None, False
                 else :
