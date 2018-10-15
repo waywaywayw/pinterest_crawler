@@ -4,7 +4,10 @@
 @date: 2018-09-04
 """
 
-import os, time
+import os
+import time
+import random
+import logging
 from selenium import webdriver
 
 from atools_crawler.common.UserAgent import get_random_UA
@@ -116,6 +119,47 @@ class MyWebDriver(object):
         driver = webdriver.Firefox(firefox_profile=profile,
                                    executable_path=self._executable_path)
         return driver
+
+    def silde_down_until_stable(self, monitor_elem="", step_delay=0.2, until_num=-1, until_time=10):
+        """
+        下滑直到稳定
+        :param step_delay:
+        :param monitor_elem:
+        :param until_num:
+        :param until_time:
+        :return:
+        """
+        driver = self._driver
+        # 不停的滑啊滑啊
+        same = 0
+        pre_len = 0
+        start_time = time.time()
+        while True:
+            # 给浏览器发送滑的操作
+            driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+            # 滑一次休息一下
+            time.sleep(random.uniform(min(step_delay-0.1, 0.1), step_delay+0.1))
+
+            # 找到监控元素
+            list = driver.find_elements_by_css_selector(monitor_elem)
+            # 统计当前页面的资源数量
+            cur_len = len(list)
+            logging.warning('scanned pic resource : {}'.format(cur_len))
+            # 测试是否满足跳出条件
+            if until_num >0:    # until_num模式
+                pass
+            else:
+                if cur_len == pre_len:
+                    # 记录一些值
+                    # 如果值满足条件，就跳出循环
+                    if (time.time()-start_time) >= until_time:
+                        break
+                else:
+                    # 清空一些值
+                    start_time = time.time()
+
+            pre_len = cur_len
+
 
     def slide_down(self):
         """向下滑动窗口

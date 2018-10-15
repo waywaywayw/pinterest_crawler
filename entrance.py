@@ -167,8 +167,9 @@ class spiderWay_picDownloader :
         pre_len = 0
         while True:
             # 给浏览器发送滑的操作
-            driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
-
+            # driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+            js = "var q=document.documentElement.scrollTop=99100000"
+            driver.execute_script(js)
             # 滑一次休息0.5-0.6秒
             time.sleep(random.uniform(0.4, 0.6))
 
@@ -261,39 +262,53 @@ class spiderWay_picDownloader :
 
 def login(driver):
     print('开始访问登录页面..')
-    driver.get('https://www.pinterest.com/login/?referrer=home_page')
-    driver.find_element_by_css_selector("#email").send_keys(config.email)
-    driver.find_element_by_css_selector("#password").send_keys(config.passwd)
-    # button = driver.find_element_by_css_selector('button[class="red SignupButton active"]')
-    # driver.execute_script("$(arguments[0]).click()", button)
-    js = 'document.getElementsByClassName("red SignupButton active")[0].click();'
-    driver.execute_script(js)
-    print('模拟登录操作完毕..')
-    time.sleep(1)
-
+    try:
+        driver.get('https://www.pinterest.com/login/?referrer=home_page')
+        driver.find_element_by_css_selector("#email").send_keys(config.email)
+        driver.find_element_by_css_selector("#password").send_keys(config.passwd)
+        # button = driver.find_element_by_css_selector('button[class="red SignupButton active"]')
+        # driver.execute_script("$(arguments[0]).click()", button)
+        js = 'document.getElementsByClassName("red SignupButton active")[0].click();'
+        driver.execute_script(js)
+        print('发送登录请求完毕..')
+        time.sleep(1)
+    except Exception as e:
+        print(e)
+        print('是否没开翻墙，或者参数有误？')
+        exit(1)
 
 def get_board_list(username):
-    # 请求页面，得到板子列表
-    my_driver = MyWebDriver()
-    driver = my_driver.real_driver()
-    # 登录
-    login(driver)
-    # 获取board列表
-    print('开始访问指定用户名{}的主页'.format(username))
-    driver.get(raw_URL+username)
-    my_driver.page_to_file('temp.html')
-    soup = BeautifulSoup(driver.page_source, 'html.parser')
-    borad_elem_list = soup.findAll('div', {'class': "_49 _6s _7j _h _xt _4q"})
     borad_list = []
-    for board_elem in borad_elem_list:
-        board_href = raw_URL[:-1] + board_elem.find('a')['href']
-        borad_list.append(board_href)
-    print('用户名{} 下共有 {} 个board.'.format(username, len(borad_list)))
-    # 保存board列表
-    output_path = os.path.join('cache', 'username', username+'.txt')
-    with open(output_path, 'w', encoding='utf8') as fout:
-        for board in borad_list:
-            fout.write(board+'\n')
+    output_path = os.path.join('cache', 'username', username + '.txt')
+
+    if os.path.exists(output_path): # 已存在，直接读取
+        print('发现缓存文件.. 直接载入..')
+        with open(output_path, 'r', encoding='utf8') as fin:
+            for line in fin:
+                borad_list.append(line.strip())
+        print('用户名{} 下共有 {} 个board.'.format(username, len(borad_list)))
+    else:   # 通过请求 获取板子列表
+        my_driver = MyWebDriver()
+        driver = my_driver.real_driver()
+        # 登录
+        login(driver)
+        # 获取board列表
+        print('开始访问指定用户名{}的主页'.format(username))
+        driver.get(raw_URL+username)
+        # my_driver.page_to_file('temp.html')
+        # 下滑直到稳定
+        my_driver.silde_down_until_stable(monitor_elem='div[class="_49 _6s _7j _h _xt _4q"]')
+        soup = BeautifulSoup(driver.page_source, 'html.parser')
+        borad_elem_list = soup.findAll('div', {'class': "_49 _6s _7j _h _xt _4q"})
+        for board_elem in borad_elem_list:
+            board_href = raw_URL[:-1] + board_elem.find('a')['href']
+            borad_list.append(board_href)
+        print('用户名{} 下共有 {} 个board.'.format(username, len(borad_list)))
+        # 保存board列表
+        with open(output_path, 'w', encoding='utf8') as fout:
+            for board in borad_list:
+                fout.write(board+'\n')
+        driver.quit()
     return borad_list
 
 
