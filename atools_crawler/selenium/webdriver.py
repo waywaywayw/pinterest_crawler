@@ -71,7 +71,7 @@ class MyWebDriver(object):
         }
         chrome_options.add_experimental_option("prefs", prefs)
         # 无头模式
-        chrome_options.add_argument('--headless')
+        # chrome_options.add_argument('--headless')
         # 设置代理  未试用？！
         # chrome_options.add_argument("--proxy-server=http://202.20.16.82:10152")
         # 其他的可以参考：https://blog.csdn.net/zwq912318834/article/details/78933910
