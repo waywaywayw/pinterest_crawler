@@ -10,3 +10,4 @@ class _pic :
     # 构造方法
     def __init__(self):
         pass
+        pass
