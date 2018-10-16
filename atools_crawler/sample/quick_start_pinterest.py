@@ -14,7 +14,7 @@ from pprint import pprint
 from bs4 import BeautifulSoup
 
 from atools_crawler.requests.common_config import MyRequestsConfig
-from atools_crawler.common.UserAgent import get_random_UA
+from atools_crawler.common.UserAgent import random_ua
 
 from atools_crawler.selenium.webdriver import MyWebDriver
 
@@ -27,7 +27,7 @@ def selenium_main():
 
     # while True:
     for i in range(30):
-        soup = BeautifulSoup(driver.driver().page_source, 'html.parser')
+        soup = BeautifulSoup(driver.real_driver().page_source, 'html.parser')
         # soup.findAll('div', {'class':'_uc _4h _ud'})
         pic_cnt = len(soup.findAll('div', {'class':'Grid__Item'}))
         print('找到的图片数：', pic_cnt)
@@ -44,7 +44,7 @@ def main():
     headers = {'Connection': 'Keep-Alive'
                # ,'host': 'zhannei.baidu.com'
                # ,'ref??': ''
-                , 'User-Agent': get_random_UA()
+                , 'User-Agent': random_ua()
     }
     params = {
     }

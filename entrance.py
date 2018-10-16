@@ -3,20 +3,19 @@
 @author: weijiawei
 @date: 2018-10-15
 """
+from pprint import pprint
 import random
-
 from bs4 import BeautifulSoup
 
 from functions.historyDB import _historyDB
 # from functions.tools import StringClean
 from functions.multthreading_download import *
-
 from model.pic import _pic
-
 from standard.logger import *
 from standard.requestsClient import _requestsClient
 
 from atools_crawler.selenium.webdriver import MyWebDriver
+from atools_jsonDB.myjsondb import MyjsonDB
 import config
 
 
@@ -102,14 +101,14 @@ class spiderWay_picDownloader :
 
         # 6 下载API
         logging.warning('准备正式下载资源.. 需要下载的资源数量 : %d' %len(picList))
-        if len(picList) !=0 :
+        if len(picList) != 0:
             logging.warning('\n............................................')
             # 只下载subsetLen张资源..(这里可以改小，用于测试)
             subsetLen = len(picList)
-            succ, fail = downloadPicByList(picList[:subsetLen], self.client.requestsGet, maxThread=20, verbose=True)
+            succ, fail = downloadPicByList(picList[:subsetLen], self.client.requestsGet, maxThread=config.threading_num, verbose=True)
             logging.warning('............................................')
             logging.warning('...总共下载成功'+str(succ)+'张图片 / 下载失败'+str(fail)+'张图片...')
-        else :
+        else:
             logging.warning('唔.. 不需要进行下载了..')
 
         # work 成功
@@ -260,67 +259,83 @@ class spiderWay_picDownloader :
         return picList
 
 
-def login(driver):
-    print('开始访问登录页面..')
-    try:
-        driver.get('https://www.pinterest.com/login/?referrer=home_page')
-        driver.find_element_by_css_selector("#email").send_keys(config.email)
-        driver.find_element_by_css_selector("#password").send_keys(config.passwd)
-        # button = driver.find_element_by_css_selector('button[class="red SignupButton active"]')
-        # driver.execute_script("$(arguments[0]).click()", button)
-        js = 'document.getElementsByClassName("red SignupButton active")[0].click();'
-        driver.execute_script(js)
-        print('发送登录请求完毕..')
-        time.sleep(1)
-    except Exception as e:
-        print(e)
-        print('是否没开翻墙，或者参数有误？')
-        exit(1)
-
 def get_board_list(username):
     borad_list = []
     output_path = os.path.join('cache', 'username', username + '.txt')
 
     if os.path.exists(output_path): # 已存在，直接读取
-        print('发现缓存文件.. 直接载入..')
+        logging.warning('发现缓存文件.. 直接载入..')
         with open(output_path, 'r', encoding='utf8') as fin:
             for line in fin:
                 borad_list.append(line.strip())
-        print('用户名{} 下共有 {} 个board.'.format(username, len(borad_list)))
+        logging.warning('用户名{} 下共有 {} 个board.'.format(username, len(borad_list)))
     else:   # 通过请求 获取板子列表
-        my_driver = MyWebDriver()
-        driver = my_driver.real_driver()
-        # 登录
-        login(driver)
+        db_path = os.path.join('cache', 'login_cookie.json')
+        my_json = MyjsonDB(db_path)
+
+        if not my_json.resource_dict:   # 登录。拿到cookie
+            my_driver = MyWebDriver(params={'headless' : config.headless, 'local_config': True, 'profile_dir': config.profile_dir})
+            # my_driver = MyWebDriver(params={'headless': False})   # 为啥这样获取的cookie不能用？
+            driver = my_driver.real_driver()
+            # 登录
+            # my_driver.login(
+            #     login_url='https://www.pinterest.com/login/?referrer=home_page',
+            #     username_elem="#email",
+            #     username=config.email,
+            #     passwd_elem="#password",
+            #     passwd=config.passwd,
+            #     login_button_elem='button[class="red SignupButton active"]',
+            #     login_click_type=1
+            # )
+        else:
+            my_driver = MyWebDriver(params={'headless': config.headless})
+            driver = my_driver.real_driver()
+            # 访问主页
+            driver.get('https://www.pinterest.com/')
+            # 添加cookie到浏览器
+            cookie_dict = my_json.resource_dict
+            for cookie in cookie_dict:
+                driver.add_cookie(cookie)
+            print('cookie已添加到浏览器中：\ncookie_dict = {}'.format(cookie_dict))
+
+        # 再次访问主页，可能会得到新的cookie
+        driver.get('https://www.pinterest.com/')
+        # 保存/更新 cookie
+        cookie_dict = driver.get_cookies()
+        print('cookie已保存：\ncookie_dict = {}'.format(cookie_dict))
+        my_json.load_from_dict(cookie_dict)
+        my_json.write_to_file()
+
         # 获取board列表
-        print('开始访问指定用户名{}的主页'.format(username))
+        logging.warning('开始访问指定用户名{}的主页'.format(username))
         driver.get(raw_URL+username)
         # my_driver.page_to_file('temp.html')
-        # 下滑直到稳定
+        # 下滑直到页面稳定
         my_driver.silde_down_until_stable(monitor_elem='div[class="_49 _6s _7j _h _xt _4q"]')
         soup = BeautifulSoup(driver.page_source, 'html.parser')
         borad_elem_list = soup.findAll('div', {'class': "_49 _6s _7j _h _xt _4q"})
         for board_elem in borad_elem_list:
             board_href = raw_URL[:-1] + board_elem.find('a')['href']
             borad_list.append(board_href)
-        print('用户名{} 下共有 {} 个board.'.format(username, len(borad_list)))
+        logging.warning('用户名{} 下共有 {} 个board.'.format(username, len(borad_list)))
         # 保存board列表
         with open(output_path, 'w', encoding='utf8') as fout:
             for board in borad_list:
                 fout.write(board+'\n')
+        logging.warning('已将板子列表写入缓存')
         driver.quit()
     return borad_list
 
 
-def work(givenURL):
+def work(board_URL):
     logging.warning(
         '---------------------------------------------------------------------------------------------')
-    logging.warning('givenURL is ' + givenURL)
+    logging.warning('board_URL : ' + board_URL)
     while True:
         spider = spiderWay_picDownloader(config.Rootpath)
         # spider.client.requestsGet('https://i.pinimg.com/originals/65/23/66/65236656825be0adb17a2f1d54f3bfab.jpg')
         # work方法，成功运行，会返回True
-        if spider.work(givenURL):
+        if spider.work(board_URL):
             break
 
 
@@ -330,15 +345,21 @@ if __name__ == '__main__':
     InitLogger()
 
     if config.mode == 'URL':
-        # 遍历所有给定的URL
+        # 读取 givenURL.txt 所有的URL, 并开始下载
         with open('givenURL.txt', 'r') as infile:
-            for givenURL in infile.readlines():
-                work(givenURL)
-    elif config.mode == 'username':
-        board_list = get_board_list(config.username)
-        for board_URL in board_list:
-            work(board_URL)
+            for board_URL in infile.readlines():
+                work(board_URL)
+
+    elif config.mode.endswith('username'):
+        with open('givenUserName.txt', 'r') as fin:     # 读取 givenUserName.txt 所有的用户名
+            for username in fin:
+                # 获取指定用户名的板子列表（会保存板子列表）
+                board_list = get_board_list(username.strip())
+                if config.mode != 'only_username':
+                    # 遍历并下载所有板子
+                    for board_URL in board_list:
+                        work(board_URL)
     else:
-        print('执行模式错误！请检查config.py里的mode项')
+        logging.warning('执行模式错误！请检查config.py里的mode项')
 
     logging.warning('爬虫执行完毕！')

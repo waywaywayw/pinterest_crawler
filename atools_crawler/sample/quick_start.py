@@ -13,7 +13,7 @@ from pprint import pprint
 from bs4 import BeautifulSoup
 
 from atools_crawler.requests.common_config import MyRequestsConfig
-from atools_crawler.common.UserAgent import get_random_UA
+from atools_crawler.common.UserAgent import random_ua
 
 from atools_crawler.selenium.webdriver import MyWebDriver
 
@@ -23,7 +23,7 @@ def selenium_main():
     # url = "http://www.baidu.com"
     url = 'https://www.pinterest.com/percylee1817/machine'
     driver.get(url)
-    driver.driver()
+    driver.real_driver()
     driver.slide_down()
 
 
@@ -36,7 +36,7 @@ def main():
     headers = {'Connection': 'Keep-Alive'
                # ,'host': 'zhannei.baidu.com'
                # ,'ref??': ''
-                , 'User-Agent': get_random_UA()
+                , 'User-Agent': random_ua()
     }
     params = {
     }
